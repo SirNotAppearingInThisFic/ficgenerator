@@ -68,6 +68,8 @@ gulp.task('html', ['styles', 'scripts'], () => {
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true
     })))
+    .pipe($.if('!*.html', $.rev()))
+    .pipe($.revReplace())
     .pipe(gulp.dest('docs'));
 });
 
