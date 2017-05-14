@@ -1,61 +1,61 @@
 const SHIPS = [
-  ['Sherlock', 'John'],
-  ['Steve', 'Tony'],
-  ['Han Solo', 'Princess Leia'],
-  ['Kirk', 'Spock'],
-  ['Natasha', 'Bruce'],
-  ['Starlord', 'Gamora'],
+  [{ name: 'Sherlock', gender: 'm' }, { name: 'John', gender: 'm' }],
+  [{ name: 'Steve', gender: 'm' }, { name: 'Tony', gender: 'm' }],
+  [{ name: 'Han Solo', gender: 'm' }, { name: 'Princess Leia', gender: 'f' }],
+  [{ name: 'Kirk', gender: 'm' }, { name: 'Spock', gender: 'm' }],
+  [{ name: 'Natasha', gender: 'f' }, { name: 'Bruce', gender: 'm' }],
+  [{ name: 'Starlord', gender: 'm' }, { name: 'Gamora', gender: 'f' }],
 ];
 
 const MAIN_TROPES = [
-  'Person1 and Person2 have to pretend to be in a relationship.',
-  'Person1 and Person2 have to share a bed.',
-  'Person1 and Person2 wind up in a Canadian shack.',
-  'Person1 has a nightmare.  Person2 wakes them up. ',
-  'Somebody gives Person1 the shovel talk about Person2. ',
-  'AU: Person1 runs a coffee shop where Person2 is a regular.',
-  'Person1 grows a mustache.  Person2 is not a fan.',
-  'Person1 gets de-aged. Is this really part of Person2\'s job description?',
-  'Person1 & Person2: Aliens or bad guys made them do it.',
-  'Person1 and Person2 must fuck or they will die.',
-  'Person1 is in handcuffs.  Person2 has the key.',
-  'Person1 gets really, really drunk... and gets a little too honest with Person2.',
-  'Person1 and Person2 do something even more domestic than pick out curtains.',
-  'Person1 and Person2 are on the run from the law.',
-  'Person1 isn\'t speaking to Person2.  They know what they did.',
-  'Person1 is pretending to be in a relationship to make Person2 jealous. (It\'s successful.)',
-  'Person1 patches up Person2 after an adventure gone wrong.',
-  'Person1 gets amnesia.  Person2 has a lot of Feelings about it. ',
-  'Person1 and Person2 accidentally swap bodies.',
-  'Person1 gets turned into a kitten.  Is this really part of Person2\'s job description?',
-  'Person1 and Person2 are from the 50\'s.  Who doesn\'t look great in a leather jacket?',
-  'Person1 is on the road to becoming a villain.  Only Person2 can bring them back from the brink.',
-  'Person1 and Person2 wake up in bed together... and they\'re not sure what happened last night.',
-  'Person1 and Person2 get up to some shenanigans in public.',
-  'Everyone thinks Person1 and Person2 are dating.  What is up with THAT?!',
-  'Everyone\'s friends are conspiring to get Person1 and Person2 together.'
+  'PERSON_1 and PERSON_2 have to pretend to be in a relationship.',
+  'PERSON_1 and PERSON_2 have to share a bed.',
+  'PERSON_1 and PERSON_2 wind up in a Canadian shack.',
+  'PERSON_1 has a nightmare. PERSON_2 wakes him_or_her_1 up. ',
+  'Somebody gives PERSON_1 the shovel talk about PERSON_2. ',
+  'AU: PERSON_1 runs a coffee shop where PERSON_2 is a regular.',
+  'PERSON_1 grows a mustache. PERSON_2 is not a fan.',
+  'PERSON_1 gets de-aged. Is this really part of PERSON_2\'s job description?',
+  'PERSON_1 & PERSON_2: Aliens or bad guys made them do it.',
+  'PERSON_1 and PERSON_2 must fuck or they will die.',
+  'PERSON_1 is in handcuffs. PERSON_2 has the key.',
+  'PERSON_1 gets really, really drunk... and gets a little too honest with PERSON_2.',
+  'PERSON_1 and PERSON_2 do something even more domestic than pick out curtains.',
+  'PERSON_1 and PERSON_2 are on the run from the law.',
+  'PERSON_1 isn\'t speaking to PERSON_2. He_Or_She_1 knows what he_or_she_1 did.',
+  'PERSON_1 is pretending to be in a relationship to make PERSON_2 jealous. (It\'s successful.)',
+  'PERSON_1 patches up PERSON_2 after an adventure gone wrong.',
+  'PERSON_1 gets amnesia. PERSON_2 has a lot of Feelings about it. ',
+  'PERSON_1 and PERSON_2 accidentally swap bodies.',
+  'PERSON_1 gets turned into a kitten. Is this really part of PERSON_2\'s job description?',
+  'PERSON_1 and PERSON_2 are from the 50\'s. Who doesn\'t look great in a leather jacket?',
+  'PERSON_1 is on the road to becoming a villain. Only PERSON_2 can bring him_or_her_1 back from the brink.',
+  'PERSON_1 and PERSON_2 wake up in bed together... and they\'re not sure what happened last night.',
+  'PERSON_1 and PERSON_2 get up to some shenanigans in public.',
+  'Everyone thinks PERSON_1 and PERSON_2 are dating. What is up with THAT?!',
+  'Everyone\'s friends are conspiring to get PERSON_1 and PERSON_2 together.'
 ];
 
 const SECONDARY_TROPES = [
   'Unexpectedly, somebody has tentacles.',
-  `Person2 has had an erection for more than four hours.`,
-  `Plus, it turns out that Person1 really likes to be spanked.`,
+  `PERSON_2 has had an erection for more than four hours.`,
+  `Plus, it turns out that PERSON_1 really likes to be spanked.`,
   `They also go to a Beyonce concert.`,
   `Everybody is, for some reason, a werewolf.`,
   `There is a nonzero amount of voyeurism.`,
-  `A breeding stand is involved.  You decide how. And why.`,
+  `A breeding stand is involved. You decide how. And why.`,
   `Two words: Nipple Clamps.`,
-  `Plus, it turns out Person1 really likes to be called Daddy.`,
-  `Unrelatedly, Person2 is wearing a chastity belt.`,
-  `Plus, it turns out Person2 is really into cross-dressing.`,
-  `The handcuffs were official at first.  Later, they're just for fun.`,
+  `Plus, it turns out PERSON_1 really likes to be called Daddy.`,
+  `Unrelatedly, PERSON_2 is wearing a chastity belt.`,
+  `Plus, it turns out PERSON_2 is really into cross-dressing.`,
+  `The handcuffs were official at first. Later, they're just for fun.`,
   `A dildo makes a surprise guest appearance.`,
   `Somebody engages in phone sex.`,
   `Creator chose not to use archive warnings.`,
   `Unexpectedly, someone is a virgin.`,
   `One rule: no hands.`,
-  `Person1 is NOT amused by their new nickname.`,
-  `Eventually, Person1 gets a little tied up.  By Person2.`,
+  `PERSON_1 is NOT amused by their new nickname.`,
+  `Eventually, PERSON_1 gets a little tied up. By PERSON_2.`,
   `Non-traditional restraints make an appearance.`,
   `Most importantly, this is a Very Special Episode.`,
   `This is a musical episode.`,
@@ -79,6 +79,10 @@ class Utils {
 
     return [pair[firstIndex], pair[secondIndex]];
   }
+
+  static capitalize(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
 }
 
 class Idea {
@@ -90,24 +94,49 @@ class Idea {
 
   generateTrope(tropes) {
     let trope = Utils.sample(tropes);
-    trope = trope.replace('Person1', this.ship.personOne);
-    trope = trope.replace('Person2', this.ship.personTwo);
+    trope = this.updateTrope(trope, 'PERSON_1', this.ship.personOne.name);
+    trope = this.updateTrope(trope, 'he_or_she_1', this.ship.personOne.heOrShe);
+    trope = this.updateTrope(trope, 'He_Or_She_1', this.ship.personOne.heOrShe, true);
+    trope = this.updateTrope(trope, 'him_or_her_1', this.ship.personOne.himOrHer);
+    trope = this.updateTrope(trope, 'PERSON_2', this.ship.personTwo.name);
+    trope = this.updateTrope(trope, 'he_or_she_2', this.ship.personTwo.heOrShe);
+    trope = this.updateTrope(trope, 'He_Or_She_2', this.ship.personTwo.heOrShe, true);
+    trope = this.updateTrope(trope, 'him_or_her_2', this.ship.personTwo.himOrHer);
 
     return trope;
+  }
+
+  updateTrope(trope, key, value, capitalize = false) {
+    const regex = new RegExp(key, 'g');
+    const replaceWithCapitalized = capitalize ? Utils.capitalize(value) : value;
+    return trope.replace(regex, replaceWithCapitalized);
+  }
+}
+
+class Person {
+  constructor(person) {
+    this.data = person;
+  }
+
+  get name() {
+    return this.data.name;
+  }
+
+  get heOrShe() {
+    console.log('HE OR SHE', this.data.gender);
+    return this.data.gender === 'm' ? 'he' : 'she';
+  }
+
+  get himOrHer() {
+    return this.data.gender === 'm' ? 'him' : 'her';
   }
 }
 
 class Ship {
   constructor(id) {
     this.ship = Utils.shufflePair(SHIPS[id]);
-  }
-
-  get personOne() {
-    return this.ship[0];
-  }
-
-  get personTwo() {
-    return this.ship[1];
+    this.personOne = new Person(this.ship[0]);
+    this.personTwo = new Person(this.ship[1]);
   }
 }
 
@@ -129,7 +158,7 @@ class FicGenerator {
   }
 
   shipOption(ship, id) {
-    const shipDisplay = ship.join('/')
+    const shipDisplay = ship.map(person => person.name).join('/')
     return `<option value="${id}">${shipDisplay}</option>`;
   }
 
