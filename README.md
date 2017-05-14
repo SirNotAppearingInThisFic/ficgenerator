@@ -1,6 +1,7 @@
 # Fic Generator
 
-Generates silly story ideas
+Generates silly story ideas.
+Deploys on Github Pages.
 
 - Install: `yarn global add yo gulp-cli bower generator-webapp`
 - Run `gulp serve` to preview and watch for changes
@@ -8,4 +9,4 @@ Generates silly story ideas
 - Run `yarn add <package> --dev` to install dev dependencies
 - Run `gulp serve:test` to run the tests in the browser
 - Run `gulp` to build your webapp for production
-- Run `gulp serve:dist` to preview the production build
+- Run `gulp serve:docs` to preview the production build
