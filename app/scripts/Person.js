@@ -15,4 +15,8 @@ class Person {
   get himOrHer() {
     return this.person.gender === 'm' ? 'him' : 'her';
   }
+
+  get hisOrHer() {
+    return this.person.gender === 'm' ? 'his' : 'her';
+  }
 }

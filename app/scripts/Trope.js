@@ -45,7 +45,7 @@ const TROPES = {
     `Creator chose not to use archive warnings.`,
     `Unexpectedly, someone is a virgin.`,
     `One rule: no hands.`,
-    `PERSON_1 is NOT amused by their new nickname.`,
+    `PERSON_1 is NOT amused by his_or_her_1 new nickname.`,
     `Eventually, PERSON_1 gets a little tied up. By PERSON_2.`,
     `Non-traditional restraints make an appearance.`,
     `Most importantly, this is a Very Special Episode.`,
@@ -59,7 +59,7 @@ const TROPES = {
 
 class Trope {
   constructor(type, ship, id) {
-    const tropes = TROPES[type];
+    const tropes = Trope.TROPES[type];
 
     this._ship = ship;
     this._type = type;
@@ -68,16 +68,18 @@ class Trope {
     this.text = this.personalize(ship);
   }
 
-  personalize(id, ship) {
+  personalize(ship) {
     let trope = this.getBaseTrope();
     trope = this.updateTrope(trope, 'PERSON_1', this._ship.personOne.name);
     trope = this.updateTrope(trope, 'he_or_she_1', this._ship.personOne.heOrShe);
     trope = this.updateTrope(trope, 'He_Or_She_1', this._ship.personOne.heOrShe, true);
     trope = this.updateTrope(trope, 'him_or_her_1', this._ship.personOne.himOrHer);
+    trope = this.updateTrope(trope, 'his_or_her_1', this._ship.personOne.hisOrHer);
     trope = this.updateTrope(trope, 'PERSON_2', this._ship.personTwo.name);
     trope = this.updateTrope(trope, 'he_or_she_2', this._ship.personTwo.heOrShe);
     trope = this.updateTrope(trope, 'He_Or_She_2', this._ship.personTwo.heOrShe, true);
     trope = this.updateTrope(trope, 'him_or_her_2', this._ship.personTwo.himOrHer);
+    trope = this.updateTrope(trope, 'his_or_her_2', this._ship.personTwo.hisOrHer);
 
     return trope;
   }
@@ -89,9 +91,10 @@ class Trope {
   }
 
   getBaseTrope() {
-    return TROPES[this._type][this.id];
+    return Trope.TROPES[this._type][this.id];
   }
+  
 }
 Trope.MAIN = 'MAIN';
 Trope.SECONDARY = 'SECONDARY';
-
+Trope.TROPES = TROPES;

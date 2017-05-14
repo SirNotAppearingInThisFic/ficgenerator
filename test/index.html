@@ -16,10 +16,21 @@
     var should = chai.should();
   </script>
   <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/tether/dist/js/tether.js"></script>
   <!-- endbower -->
   <!-- include source files here... -->
+  <script src="scripts/Utils.js"></script>
+  <script src="scripts/Person.js"></script>
+  <script src="scripts/Ship.js"></script>
+  <script src="scripts/Trope.js"></script>
+  <script src="scripts/Idea.js"></script>
+  <script src="scripts/PermaLink.js"></script>
+  <script src="scripts/FicGenerator.js"></script>
+  <script src="scripts/main.js"></script>
   <!-- include spec files here... -->
-  <script src="spec/test.js"></script>
+  <script src="spec/Person-test.js"></script>
+  <script src="spec/Trope-test.js"></script>
   <script>
     if (navigator.userAgent.indexOf('PhantomJS') === -1) {
       mocha.run();
