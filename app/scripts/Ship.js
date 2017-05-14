@@ -10,8 +10,8 @@ const SHIPS = [
 class Ship {
   constructor(id, personOneId, personTwoId) {
     if (!id) return;
-    personOneId = personOneId || Utils.randomTo(2);
-    personTwoId = personTwoId || (personOneId + 1) % 2
+    personOneId = personOneId === undefined ? Utils.randomTo(2) : personOneId;
+    personTwoId = personTwoId === undefined ? (personOneId + 1) % 2 : personTwoId;
 
     const ship = SHIPS[id];
 
