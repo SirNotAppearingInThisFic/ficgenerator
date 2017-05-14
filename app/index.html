@@ -32,11 +32,10 @@
 
       <div class="row">
         <div class="col-lg-12 main-column">
-          <p>Choose a ship, hit the button, get inspired!</p>
-
           <div class="form-group">
+            <label>Select a ship!</label>
             <select id="ship-selector" class="form-control">
-              <option value="">Select a ship!</option>
+              <option value=""></option>
             </select>
           </div>
           <button id="go" class="btn btn-primary">Idea me!</button>
@@ -46,6 +45,10 @@
           <p class="idea">
             <span id="main-trope"></span>
             <span id="secondary-trope"></span>
+          </p>
+
+          <p id="link-container" class="hidden">
+            <strong>PermaLink: </strong><a id="link"></a>
           </p>
         </div>
       </div>
@@ -73,6 +76,13 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+    <script src="scripts/Utils.js"></script>
+    <script src="scripts/Person.js"></script>
+    <script src="scripts/Ship.js"></script>
+    <script src="scripts/Trope.js"></script>
+    <script src="scripts/Idea.js"></script>
+    <script src="scripts/PermaLink.js"></script>
+    <script src="scripts/FicGenerator.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
