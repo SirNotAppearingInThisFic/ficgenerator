@@ -1,15 +1,60 @@
-const ships = [
+const SHIPS = [
   ['Sherlock', 'John']
 ];
 
-const mainTropes = [
-  'Person1 and Person2 have to pretend to be in a relationship.'
+const MAIN_TROPES = [
+  'Person1 and Person2 have to pretend to be in a relationship.',
 ];
 
-const secondaryTropes = [
+const SECONDARY_TROPES = [
   'Unexpectedly, somebody has tentacles.'
 ];
 
+class Utils {
+  static sample(array) {
+    const random = Math.random();
+    const index = Math.floor(random * array.length);
+    return array[index];
+  }
+
+  static shufflePair(pair) {
+    const random = Math.random();
+    const firstIndex = Math.floor(random * 2);
+    const secondIndex = (firstIndex + 1) % 2;
+
+    return [pair[firstIndex], pair[secondIndex]];
+  }
+}
+
+class Idea {
+  constructor(ship) {
+    this.ship = ship;
+    this.mainTrope = this.generateTrope(MAIN_TROPES);
+    this.secondaryTrope = this.generateTrope(SECONDARY_TROPES);
+  }
+
+  generateTrope(tropes) {
+    let trope = Utils.sample(tropes);
+    trope = trope.replace('Person1', this.ship.personOne);
+    trope = trope.replace('Person2', this.ship.personTwo);
+
+    return trope;
+  }
+}
+
+class Ship {
+  constructor(id) {
+    this.ship = Utils.shufflePair(SHIPS[id]);
+  }
+
+  get personOne() {
+    return this.ship[0];
+  }
+
+  get personTwo() {
+    return this.ship[1];
+  }
+}
 
 class FicGenerator {
   constructor($) {
@@ -19,11 +64,11 @@ class FicGenerator {
     this.$secondaryTrope = $('#secondary-trope');
 
     this.setupShips();
+    this.$goButton.click(this.generateIdea.bind(this));
   }
 
   setupShips() {
-    console.log(ships);
-    ships
+    SHIPS
       .map(this.shipOption)
       .forEach(option => this.$shipSelector.append(option));
   }
@@ -34,7 +79,14 @@ class FicGenerator {
   }
 
   generateIdea() {
+    const shipId = this.$shipSelector.val();
+    if (!shipId) return;
 
+    const ship = new Ship(parseInt(shipId));
+    const idea = new Idea(ship);
+
+    this.$mainTrope.text(idea.mainTrope);
+    this.$secondaryTrope.text(idea.secondaryTrope);
   }
 }
 
