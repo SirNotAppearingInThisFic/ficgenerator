@@ -34,12 +34,12 @@ class FicGenerator {
   generateIdea() {
     const shipId = this.$shipSelector.val();
 
-    if (shipId) {
-      this.ship = new Ship(parseInt(shipId));
-      this.idea = new Idea(this.ship);
-    } else {
+    if (shipId === "") {
       this.ship = new Ship();
       this.idea = Idea.blank();
+    } else {
+      this.ship = new Ship(parseInt(shipId));
+      this.idea = new Idea(this.ship);
     }
 
     this.renderIdea();
