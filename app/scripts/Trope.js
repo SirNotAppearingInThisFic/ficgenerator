@@ -25,7 +25,7 @@ const TROPES = {
     'PERSON_1 and PERSON_2 wake up in bed together... and they\'re not sure what happened last night.',
     'PERSON_1 and PERSON_2 get up to some shenanigans in public.',
     'Everyone thinks PERSON_1 and PERSON_2 are dating. What is up with THAT?!',
-    'Everyone\'s friends are conspiring to get PERSON_1 and PERSON_2 together.'
+    'Everyone is conspiring to get PERSON_1 and PERSON_2 together.'
   ],
   SECONDARY: [
     'Unexpectedly, somebody has tentacles.',
