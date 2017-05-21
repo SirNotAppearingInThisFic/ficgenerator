@@ -7,13 +7,21 @@ class PermaLink {
   }
  
   static toLink(ship, idea) {
+    const queryParams = PermaLink.toQueryParams(ship, idea);
+
+    return `${URL}${queryParams}`;
+  }
+
+  static toQueryParams(ship, idea) {
+    if (!ship || ship.id === undefined) return;
+
     const shipId = ship.id;
     const personOneId = ship.personOne.id;
     const personTwoId = ship.personTwo.id;
     const mainTropeId = idea.mainTrope.id;
     const secondaryTropeId = idea.secondaryTrope.id;
 
-    return `${URL}?idea=s${ship.id}p${personOneId}p${personTwoId}m${mainTropeId}s${secondaryTropeId}`;
+    return `?idea=s${ship.id}p${personOneId}p${personTwoId}m${mainTropeId}s${secondaryTropeId}`;
   }
 
   static parseQuery(query) {

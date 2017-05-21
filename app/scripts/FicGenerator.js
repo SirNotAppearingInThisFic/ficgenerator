@@ -14,6 +14,9 @@ class FicGenerator {
     this.firstIdea();
 
     this.$goButton.click(this.onGo.bind(this));
+    window.addEventListener('popstate', (event) => {
+      this.firstIdea();
+    });
   }
 
   setupShips() {
@@ -43,6 +46,7 @@ class FicGenerator {
     }
 
     this.renderIdea();
+    this.updateHistory();
   }
 
   renderIdea() {
@@ -63,6 +67,10 @@ class FicGenerator {
       this.$link.attr('href', link);
       this.$linkContainer.removeClass('hidden');
     }
+  }
+
+  updateHistory() {
+    history.pushState(null, null, PermaLink.toQueryParams(this.ship, this.idea));
   }
 
   firstIdea() {
