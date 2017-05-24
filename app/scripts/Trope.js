@@ -25,7 +25,17 @@ const TROPES = {
     'PERSON_1 and PERSON_2 wake up in bed together... and they\'re not sure what happened last night.',
     'PERSON_1 and PERSON_2 get up to some shenanigans in public.',
     'Everyone thinks PERSON_1 and PERSON_2 are dating. What is up with THAT?!',
-    'Everyone is conspiring to get PERSON_1 and PERSON_2 together.'
+    'Everyone is conspiring to get PERSON_1 and PERSON_2 together.',
+    `PERSON_1 has a birthday and PERSON_2 doesn't notice, what with the whole "busy saving the world" thing.`,
+    `PERSON_1 and PERSON_2 run into each other on Tindr. Oops.`,
+    `PERSON_1 and PERSON_2 had a one-night stand, years ago. Now, they have to work together — but PERSON_2 doesn't seem to remember. This is awkward.`,
+    `PERSON_1 and PERSON_2 are cellmates together. That doesn't mean they have to like it.`,
+    `PERSON_1 is failing a class. PERSON_2 is his_or_her_1 tutor.`,
+    `PERSON_1 is the star of the newest hit Broadway Musical. PERSON_2 is a very finicky reviewer. When they meet, sparks fly. AU.`,
+    `PERSON_1 is sure his_or_her_1 senior year of high school is going to be just as predictable as the three years that preceded it. Then he_or_she_1 meets PERSON_2, who's from the wrong side of the tracks — suddenly, nothing seems so certain anymore. HS AU.`,
+    `PERSON_1 and PERSON_2 are set up in an arranged marriage by their parents.`,
+    `PERSON_1 is having a horrible day. Fortunately, PERSON_2 is there to pile on.`,
+    `PERSON_1 is just trying to get to retirement peacefully. Unfortunately for him_or_her_1, PERSON_2 is his_or_her_1 partner.`,
   ],
   SECONDARY: [
     'Unexpectedly, somebody has tentacles.',
@@ -54,6 +64,13 @@ const TROPES = {
     `Sex pollen makes an appearance.`,
     `Meanwhile, a sexy text goes awry.`,
     `The author is clearly uncomfortable with the word "cock".`,
+    `Also, PERSON_2 likes being in trouble. I mean, realllllllyyy likes trouble.`,
+    `Also, PERSON_1 is maybe just sliiiiightly lying about his_or_her_1 past?`,
+    `Also, PERSON_2 is so not into this whole "rules" thing.`,
+    `Someone dresses in drag.`,
+    `Someone is in denial.`,
+    `Someone might have a teensy thing for dirty talk.`,
+    `Nobody expects the Spanish Inquisition.`,
   ]
 };
 
